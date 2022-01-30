@@ -1,0 +1,270 @@
+:root {
+
+    /* Set sans-serif & mono fonts */
+    --sans-font: "fira_sansregular", -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Nimbus Sans L", Roboto, Noto, "Segoe UI", Arial, Helvetica, "Helvetica Neue", sans-serif;
+    --mono-font: Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  
+    /* Body font size. By default, effectively 18.4px, based on 16px as 'root em' */
+    --base-fontsize: 1.15rem;
+  
+    /* Major third scale progression - see https://type-scale.com/ */
+    --header-scale: 1.25;
+  
+    /* Line height is set to the "Golden ratio" for optimal legibility */
+    --line-height: 1.618;
+  
+    /* Default (light) theme */
+    /* inverted both becase I prefer dark theme by default */
+    --bg: #212121;
+    --bg-transparent: #2f2f2f86;
+    --bg-album-transparent: #2f2f2fe5;
+    --accent-bg: #2B2B2B;
+    --text: #DCDCDC;
+    --text-light: #ABABAB;
+    --border: #666;
+    --accent: #0099ff;
+    --accent-light: #FFECB3;
+    --code: #F06292;
+    --preformatted: #CCC;
+    --disabled: #111;
+
+  }
+
+  /* main body */
+  html {
+    /* Set the font globally */
+    font-family: var(--sans-font);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    color: var(--text);
+    background: var(--bg);
+    font-size: 1.15rem;
+    line-height: 1.5;
+  }
+
+
+  /* header */
+
+  header {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  a.header-site-title {
+    border: none;
+    font-size: calc(var(--base-fontsize) * var(--header-scale) * var(--header-scale));
+    margin-top:0;
+  }
+
+  a.header {
+    margin-top:0;
+  }
+
+  nav {
+    font-size: 1rem;
+    line-height: 2;
+  }
+
+  nav a,
+  nav a:visited {
+    margin: 0 1rem 0 0;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    color: var(--text);
+    display: inline-block;
+    padding: 0.1rem 1rem;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    transition: all .25s ease-in-out;
+  }
+
+/* links and buttons */
+  a,
+  a:visited {
+    color: var(--accent);
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  a button,
+  button,
+  [role="button"],
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"] {
+    border: none;
+    border-radius: 5px;
+    background: var(--accent);
+    font-size: 1rem;
+    color: var(--bg);
+    padding: 0.7rem 0.9rem;
+    margin: 0.5rem 0;
+  }
+
+  a button[disabled],
+  button[disabled],
+  [role="button"][aria-disabled="true"],
+  input[type="submit"][disabled],
+  input[type="reset"][disabled],
+  input[type="button"][disabled],
+  input[type="checkbox"][disabled],
+  input[type="radio"][disabled],
+  select[disabled] {
+    cursor: default;
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  /* gallery main page */
+
+  .album-page {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+  }
+
+  .album-item {
+    flex: 50%;
+    max-width: 50%;
+    min-height: 40vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+  }
+
+/* Responsive layout, one item instead of two on screen */
+  @media screen and (max-width: 600px) {
+    .album-item {
+      flex: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .album-item a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: var(--text);
+  }
+
+  .album-page a:hover {
+    background-color: var(--bg-transparent);
+    transition: all .25s ease-in-out;
+  }
+
+  span.album-title {
+    font-size: 1.6rem;
+    width: 100%;
+    min-height: 15%;
+    max-height: 30%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    background-color: var(--bg-transparent);
+  }
+
+  span.album-title-date {
+    display: block;
+    border-top: 1px solid var(--text-light);
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+ /* album view */
+
+  section.album {
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    padding-top: 1rem;
+    padding-bottom: 5rem;
+  }
+
+  .album h1 {
+    text-align: center;
+    text-shadow: 1px 1px 1px var(--bg);
+    font-size: 3rem;
+  }
+
+  .album h3 {
+    border-top: 1px solid var(--border);
+    text-shadow: 1px 1px 1px var(--bg);
+    width: 55%;
+    padding-top: 0.5rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .album article {
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: var(--bg-album-transparent);
+    border-radius: 5px;
+  }
+
+  figure {
+    text-align: center;
+  }
+
+  .album img {
+    border-radius: 5px;;
+  }
+
+ /* figcaption */
+  /* resize images according to device */
+  img.exif {
+    max-width: 65vw;
+  }
+
+  figcaption.exif {
+    background-color: var(--accent-bg);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 5px;
+  }
+
+  span.caption {
+    display: block;
+    padding-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    word-spacing: normal;
+  }
+
+  span.icon {
+    padding-left: 28px;
+    background-position: left;
+    background-repeat: no-repeat;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  /*figcpation*/
+
+  /* footer */
+
+  footer {
+    margin-top: 4rem;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    text-align: center;
+    border-top: 1px solid var(--border);
+  }

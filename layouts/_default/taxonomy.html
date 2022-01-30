@@ -1,0 +1,19 @@
+{{ define "body_class" }} post-template {{ end }}
+
+{{ define "main" }}
+
+{{- partial "header.html" $ -}}
+
+
+    {{ if .Data.Term }}
+    <h1>{{.Data.Term }}</h1>
+       {{- partial "album-card.html" . -}}
+    {{ end }}
+    <div class="clear">&nbsp;</div>
+    <nav>
+        {{ range .Site.Taxonomies.tags }}
+            <a href="{{ .Page.Permalink }}">{{ .Page.Title }} ({{ .Count }})</a>
+        {{ end }}
+    </nav>
+
+{{ end }}

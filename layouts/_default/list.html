@@ -1,0 +1,23 @@
+{{ define "body_class" }} post-template {{ end }}
+
+{{ define "main" }}
+
+{{- partial "header.html" . -}}
+<main>
+    {{ if .Content }}
+    {{- $imageName := .Params.albumthumb -}}
+    {{- $originalImage := resources.Get $imageName -}}
+    <section class="album" style="background-image:url('{{ $originalImage.Permalink }}');">
+        <h1 class="album">{{.Title}}</h1>
+        <h3 class="album">Posted on {{.Date.Format "Monday, January 2, 2006" }} by {{ .Site.Author.name }}</h3>
+        <article>
+            <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
+            {{.Content}}
+        </article>
+    </section>
+    {{ end }}
+    <!-- Ranges through content/posts/*.md -->
+    {{- partial "album-card.html" . -}}
+    <div class="clear">&nbsp;</div>
+</main>
+{{ end }}
