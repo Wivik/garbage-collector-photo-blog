@@ -107,13 +107,13 @@ tags:
 
 In case the archetype won't work, copy the `default.md` file present in `garbage-collector-photo-blog/archetypes/default.md` in the `archetypes` folder present in the Hugo site.
 
-## License
+## License and Attributions
 
 This theme is licensed under the [MIT License](LICENSE).
 
 Some CSS parts come from the [SimpleCSS](https://simplecss.org) framework for general design like buttons and navigation header.
 
-The archetype used to generate the gallery page was inspired by the [AutoPhugo](https://github.com/kc0bfv/autophugo/) theme and is licensed under the Creative Commons Attribution 3.0 License.
+The archetype used to generate the gallery page was inspired by the [AutoPhugo](https://github.com/kc0bfv/autophugo/) theme, licensed under the Creative Commons Attribution 3.0 License.
 
 The Creative Commons formater partial uses [Remix Icons](https://github.com/Remix-Design/remixicon) which are available under Apache License 2.0.
 
