@@ -4,7 +4,7 @@
 
 ## Introduction
 
-This theme is a custom-made for my Photo Blog based on [Hugo](https://gohugo.io). The front page displays the album covers, and the post page display the photos with EXIF metadata and the possibility to write some text with it.
+This theme is a custom-made for [my Photo Blog](https://photos.zedas.fr) based on [Hugo](https://gohugo.io). The front page displays the album covers, and the post page display the photos with EXIF metadata and the possibility to write some text with it.
 
 ## How to install
 
