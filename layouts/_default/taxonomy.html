@@ -6,8 +6,11 @@
 
 
     {{ if .Data.Term }}
-    <h1>{{.Data.Term }}</h1>
-       {{- partial "album-card.html" . -}}
+    <h1>Results for tag {{ .Data.Term }}</h1>
+       {{- partial "album-card-full.html" . -}}
+    {{ else }}
+    <h1>Tags</h1>
+    <p>💡 Use the "Album" tag to see all available albums.</p>
     {{ end }}
     <div class="clear">&nbsp;</div>
     <nav>

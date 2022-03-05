@@ -3,11 +3,12 @@
 {{ define "main" }}
 
 {{- partial "header.html" . -}}
+
 <main>
     {{ if .Content }}
     {{- $imageName := .Params.albumthumb -}}
     {{- $originalImage := resources.Get $imageName -}}
-    <section class="album" style="background-image:url('{{ $originalImage.Permalink }}');">
+    <section class="album">
         <h1 class="album">{{.Title}}</h1>
         <h3 class="album">Posted on {{.Date.Format "Monday, January 2, 2006" }} by {{ .Site.Author.name }}</h3>
         <article>
@@ -17,7 +18,11 @@
     </section>
     {{ end }}
     <!-- Ranges through content/posts/*.md -->
+    {{if .IsHome }}
     {{- partial "album-card.html" . -}}
+    {{ else }}
+    {{- partial "album-card-full.html" . -}}
+    {{ end }}
     <div class="clear">&nbsp;</div>
 </main>
 {{ end }}

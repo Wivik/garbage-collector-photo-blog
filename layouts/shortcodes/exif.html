@@ -24,9 +24,9 @@
         {{ with .Tags.ExposureTime }}<span class="icon" style="background-image: url('{{ $ExposureTimeIcon.Permalink }}');">{{ partial "format-exposure-time.html" . }}</span>{{ end }}
         {{ with .Tags.ISOSpeedRatings }}<span class="icon" style="background-image: url('{{ $ISOSpeedRatingsIcon.Permalink }}');">ISO {{ . }}</span>{{ end }}
 
-        {{with .Tags.Model }}<span class="caption"><span class="icon" style="background-image: url('{{ $cameraIcon.Permalink }}');">{{ . }}</span>{{ end }} {{with .Tags.LensModel }}{{ . }}</span>{{ end }}
+        {{with .Tags.Model }}<span class="picture-information"><span class="icon" style="background-image: url('{{ $cameraIcon.Permalink }}');">{{ . }}</span>{{ end }} {{with .Tags.LensModel }}{{ . }}</span>{{ end }}
 
-        {{ with .Tags.Copyright}}{{ partial "format-creative-commons.html" . }}{{ end }} {{with .Tags.Artist }}<span class="caption">{{ . }} - {{ end }} {{with .Tags.DateTimeOriginal.Format "January 2, 2006" }}{{ . }}</span>{{ end }}
+        {{ with .Tags.Copyright}}{{ partial "format-creative-commons.html" . }}{{ end }} {{with .Tags.Artist }}<span class="picture-information">{{ . }} - {{ end }} {{with .Tags.DateTimeOriginal.Format "January 2, 2006" }}{{ . }}</span>{{ end }}
     </figcaption>
 {{end }}
 </figure>

@@ -10,7 +10,7 @@ draft: false
 #  phototitle: A title for the photo
 #  description: A sub-title or description for the photo
 tags:
-  - Todo
+  - Album
 ---
 
 {{ range $elem_index, $elem_val := $resources -}}

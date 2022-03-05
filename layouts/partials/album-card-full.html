@@ -1,6 +1,6 @@
 <section class="album-page">
 
-    {{ range first 4 .Pages }}
+    {{ range .Pages }}
     {{- $imageName := .Params.albumthumb -}}
     {{- $originalImage := resources.Get $imageName -}}
     {{- $resize := "1024x" -}}
@@ -15,8 +15,4 @@
         </article>
     {{ end }}
 
-</section>
-<section class="bottom-landingpage">
-    <p>For a better bandwidth usage, this landing page will only displays the last 4 albums.</p>
-    <p>Please check the <a href="/tags/">Tags</a> section to see the whole content.</p>
 </section>
