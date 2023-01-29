@@ -85,6 +85,24 @@
     transition: all .25s ease-in-out;
   }
 
+  a.tags,
+  a.tags:visited {
+    margin: 0 1rem 1rem 0;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    color: var(--text);
+    display: inline-block;
+    padding: 0.1rem 1rem;
+    text-decoration: none;
+  }
+
+  a.tags:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    transition: all .25s ease-in-out;
+  }
+
+
 /* links and buttons */
   a,
   a:visited {

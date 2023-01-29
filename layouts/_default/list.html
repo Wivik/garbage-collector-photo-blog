@@ -11,6 +11,9 @@
     <section class="album">
         <h1 class="album">{{.Title}}</h1>
         <h3 class="album">Posted on {{.Date.Format "Monday, January 2, 2006" }} by {{ .Site.Author.name }}</h3>
+        {{ range .Params.tags }}
+        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="tags">{{ . }}</a>
+        {{ end }}
         <article>
             <!-- "{{.Content}}" pulls from the markdown content of the corresponding _index.md -->
             {{.Content}}

@@ -21,7 +21,7 @@
         {{ with $alt }}<span class="caption">{{ . }}</span>{{ end }}
         {{ with .Tags.FNumber }}<span class="icon" style="background-image: url('{{ $FNumberIcon.Permalink }}');">f/{{ . }}</span>{{ end }}
         {{ with .Tags.FocalLength }}<span class="icon" style="background-image: url('{{ $focalLengthIcon.Permalink }}');"> {{ . }}mm</span>{{ end }}</span>
-        {{ with .Tags.ExposureTime }}<span class="icon" style="background-image: url('{{ $ExposureTimeIcon.Permalink }}');">{{ partial "format-exposure-time.html" . }}</span>{{ end }}
+        {{ with .Tags.ExposureTime }}<span class="icon" style="background-image: url('{{ $ExposureTimeIcon.Permalink }}');">{{ partial "exposure_duration.html" . }}s - {{ . }}</span>{{ end }}
         {{ with .Tags.ISOSpeedRatings }}<span class="icon" style="background-image: url('{{ $ISOSpeedRatingsIcon.Permalink }}');">ISO {{ . }}</span>{{ end }}
 
         {{with .Tags.Model }}<span class="picture-information"><span class="icon" style="background-image: url('{{ $cameraIcon.Permalink }}');">{{ . }}</span>{{ end }} {{with .Tags.LensModel }}{{ . }}</span>{{ end }}
