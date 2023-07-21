@@ -2,7 +2,7 @@
 
 ## Deprecation notice
 
-This theme is no longer maintained and has been replaced by a [new version](https://github.com/Wivik/garbage-collector-photo-blog).
+This theme is no longer maintained and has been replaced by a [new version](https://github.com/Wivik/garbage-collector-photo-blog-theme).
 
 ![theme](theme.png)
 
